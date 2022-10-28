@@ -231,7 +231,6 @@ section {
       margin: 2rem;
     }
   }
-  
   @media (max-width: 1113px) {
     .header .search-form {
       width: 90%;
@@ -312,7 +311,7 @@ a {
     opacity: 0.8;
     -ms-overflow-style: none;
     scrollbar-width: none;
-	  margin-top: 62vw;
+	  margin-top: 95vh;
 
 }
 .container::-webkit-scrollbar{
