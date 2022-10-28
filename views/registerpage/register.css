@@ -124,7 +124,9 @@ section {
   z-index: 1000;
   background: var(--white);
 }
-
+.navbar{
+  margin-left: -21vw;
+}
 .left-header img{
   vertical-align: middle;
   width: 40px;
