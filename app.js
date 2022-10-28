@@ -120,6 +120,14 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
+//Showing comming soon page
+
+app.use('/coomingsoon', express.static(path.join(__dirname, '/views/coomingsoon')));
+app.get("/coomingsoon", function (req, res) {
+    res.render("commingsoon");
+});
+
+
 // Showing secret page
 app.use('/secret/:id', express.static(path.join(__dirname, '/views/dashboard')));
 app.get("/secret/:id", isLoggedIn, function (req, res) {
