@@ -125,7 +125,7 @@ section {
   background: var(--white);
 }
 .navbar{
-  margin-left: -21vw;
+  margin-left: -40vw;
 }
 .left-header img{
   vertical-align: middle;
@@ -231,6 +231,7 @@ section {
       margin: 2rem;
     }
   }
+
   @media (max-width: 1113px) {
     .header .search-form {
       width: 90%;
@@ -290,7 +291,7 @@ p {
 }
 
 span {
-    font-size: 2vw;
+    font-size: 1.2vw;
     color: beige;
 }
 
@@ -311,7 +312,7 @@ a {
     opacity: 0.8;
     -ms-overflow-style: none;
     scrollbar-width: none;
-	  margin-top: 95vh;
+	  margin-top: 62vw;
 
 }
 .container::-webkit-scrollbar{
