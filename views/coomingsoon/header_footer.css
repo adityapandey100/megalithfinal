@@ -149,16 +149,16 @@ section{
 
 .mip-header #menu-btn {
   display: none;
-  position: absolute;
+  position: relative;
   top: 120%;
-  left: 50%;
+  left: 29%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
-  background: var(--white);
+  width: 4.3rem;
+  background: var(--light-bg);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   -webkit-animation: fadeIn .2s linear;
           animation: fadeIn .2s linear;
