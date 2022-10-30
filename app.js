@@ -249,13 +249,13 @@ app.post('/forgot-password', (req, res, next) => {
                   port: 587,
                   secure: false, // true for 465, false for other ports
                   auth: {
-                    user: 'adityapandeygkp90@gmail.com', // generated ethereal user
-                    pass: 'mnzyzlwkfwkpgvjr', // generated ethereal password
+                    user: 'adityapandeyiitkgp2125@gmail.com', // generated ethereal user
+                    pass: 'rqzevkgnkvschtsl', // generated ethereal password
                   },
                 });
                 // send mail with defined transport object
                 let mailinfo ={
-                          from: '" Megalith " <adityapandeygkp90@gmail.com>', // sender address
+                          from: '" Megalith " <adityapandeyiitkgp2125@gmail.com>', // sender address
                           to: databaseEmail, // list of receivers
                           subject: "Reset password link", // Subject line
                           // text: "Hello world?", // plain text body
@@ -369,14 +369,14 @@ app.post('/contactus', function (req, res) {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-                user: 'adityapandeygkp90@gmail.com', // generated ethereal user
-                pass: 'mnzyzlwkfwkpgvjr', // generated ethereal password
+                user: 'adityapandeyiitkgp2125@gmail.com', // generated ethereal user
+                pass: 'rqzevkgnkvschtsl', // generated ethereal password
             },
     });
                 // send mail with defined transport object
     let mailinfo ={
-        from: '" Megalith " <adityapandeygkp90@gmail.com>', // sender address
-        to: 'adityapandeyiitkgp2125@gmail.com , utkarshgupta6203@gmail.com', // list of receivers
+        from: '" Megalith " <adityapandeyiitkgp2125@gmail.com>', // sender address
+        to: 'adityapandeygkp90@gmail.com', // list of receivers
         subject: "Query details", // Subject line
         // text: "Hello world?", // plain text body
         text: "Hey here is new quert for you..",
