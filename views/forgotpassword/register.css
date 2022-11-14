@@ -121,7 +121,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 1000;
   background: var(--white);
 }
 .navbar{
@@ -168,7 +167,10 @@ section {
   background: var(--black);
   color: var(--white);
 }
-
+label{
+  font-size: 2vw;
+  color: #eee;
+}
 .header #menu-btn {
   display: none;
   position: relative;
@@ -302,16 +304,15 @@ a {
 
 .container {
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: scroll;
     width: 60%;
     max-width: 100%;
-    min-height: 33vw;
+    min-height: 24vw;
     opacity: 0.8;
     -ms-overflow-style: none;
     scrollbar-width: none;
-	  margin-top: 62vw;
+	  margin-top: 114vh;
 
 }
 .container::-webkit-scrollbar{
@@ -323,7 +324,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 0 5vw;
-    min-height: 35vw;
+    min-height: 23vw;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -483,14 +484,11 @@ button.ghost {
 .sign-in-container {
     left: 0;
     width: 50%;
-    z-index: 2;
 }
 
 .sign-up-container {
-    left: 0;
+    left: 15vw;
     width: 50%;
-    z-index: 1;
-    opacity: 0;
 }
 
 .overlay-container {
@@ -501,7 +499,6 @@ button.ghost {
     height: 100%;
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
-    z-index: 100;
 }
 
 .overlay {
@@ -530,63 +527,19 @@ button.ghost {
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
-
-.overlay-right {
-    right: 0;
-    transform: translateX(0);
-}
-
-.overlay-left {
-    transform: translateX(-20%);
-}
-
-/*....Animation....*/
-
-/*....Move signin to the right....*/
-.container.right-panel-active .sign-in-container {
-    transform: translateX(100%);
-    display: none;
-
-}
-
-/*....Move overlay to the left....*/
-.container.right-panel-active .overlay-container {
-    transform: translateX(-100%);
-}
-
-/*....Bring sign up over sign in....*/
-.container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-}
-
-/*...Move overlay back to right....*/
- .container.right-panel-active .overlay {
-    transform: translateX(50%);
-}
-
-.container.right-panel-active .overlay-left {
-    transform: translateX(0);
-}
-
-.container.right-panel-active .overlay-right {
-    transform: translateX(20%);
-    display: none;
-}
 @media (max-width: 450px){
     .container{
-        min-height: 62vh;
-        margin-top: 122vh;
+        min-height: 51vh;
+        margin-top: 106vh;
         width: 76%;
         overflow: hidden;
     }
     .sign-in-container{
       height: 60vh;
     }
-    /* .sign-up-container{
-
-    } */
+    .sign-up-container{
+       left: 10%;
+    }
     .createaccount{
       margin-top: 4vh;
       font-size: 3.3vh;
@@ -595,9 +548,8 @@ button.ghost {
       font-size: 10vw;
     }
     .form-container{
-        transform: translate(0%,40%);
-        width: 100%;
-        top: 5vh;
+        width: 85%;
+        top: 15vh;
     }
     .overlay-container{
         width: 100%;
@@ -613,7 +565,7 @@ button.ghost {
         transform: translate(100%,0%);
     }
     .signupform{
-      height: 81vh;
+      height: 35vh;
       margin-top: 2vh;
     }
     .overlay-left{
@@ -688,7 +640,7 @@ button.ghost {
 }
 @media(min-width:900px){
     h1{
-      font-size: 3vw;
+      font-size: 2.3vw;
     }
     p{
       font-size: 1.7vw;
@@ -696,10 +648,15 @@ button.ghost {
 }
 @media(max-width: 376px){
     .container{
-      margin-top: 171vh;
+      margin-top: 154vh;
+      min-height: 46vh;
+    }
+    .sign-up-container{
+      top: 10%;
+      height: 37vh;
     }
     .signupform{
-      height: 97vh;
+      height: 34vh;
     }
     .right-panel-active{
       min-height: 170vh;

@@ -222,7 +222,7 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
     res.redirect("/login");
 }
-
+app.use('/forgot-password', express.static(path.join(__dirname, '/views/forgotpassword')))
 app.get('/forgot-password', (req, res, next) => {
     res.render('forgot-password');
 });
@@ -242,7 +242,7 @@ app.post('/forgot-password', (req, res, next) => {
                 id: ID
             }
             const token = jwt.sign(payload, secret, { expiresIn: '15m' })
-            const link = `http://localhost:3000/reset-password/${ID}/${token}`
+            const link = `http://141.136.35.50:3000/reset-password/${ID}/${token}`
             console.log(link);
             const transporter = nodemailer.createTransport({
                   host: "smtp.gmail.com",
@@ -279,7 +279,7 @@ app.post('/forgot-password', (req, res, next) => {
 
 
 
-
+app.use('/reset-password/:ID/:token', express.static(path.join(__dirname, '/views/resetpassword')))
 app.get('/reset-password/:ID/:token', (req, res, next) => {
     const { ID, token } = req.params;
     //check if this id exists in database
