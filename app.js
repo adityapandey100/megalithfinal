@@ -13,16 +13,21 @@ const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const app = express();
 const path = require('path');
+var flash = require('connect-flash');
+const { request } = require('http');
+const { response } = require('express');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());//used
 app.use(cors());//middlewares
 app.use(session({
     secret: "Rusty is a dog",
+    cookie : {maxAge : 6000},
     resave: false,
     saveUninitialized: false
 }));
 
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 //DB CONNECTION
@@ -351,19 +356,16 @@ app.post('/reset-password/:ID/:token', (req, res, next) => {
 
 // Contact us form
 
-app.get("/contactus", function (req, res) {
-    res.render("contactus");
+app.get("/contactusstatus", function (req, res) {
+    res.render("home" , { message : flash('messageofcontact')});
 });
+
 
 app.post('/contactus', function (req, res) {
     const sendername = req.body.sendername;
     const senderemail = req.body.senderemail;
     const sendersubject = req.body.sendersubject;
     const sendermessage = req.body.sendermessage;
-    console.log(senderemail);
-    console.log(sendername);
-    console.log(sendersubject);
-    console.log(sendermessage);
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 587,
@@ -388,10 +390,8 @@ app.post('/contactus', function (req, res) {
     transporter.sendMail(mailinfo, function(error, info){
         if (error) {
           console.log(error);
-          res.send("Not Found!!")
         } else {
-          console.log('Email sent: ' + info.response);
-          res.send("Your Query is been resistered and you will be informed")
+        console.log('Email sent: ' + info.response);
         }
     });
 });

@@ -61,7 +61,7 @@
   right: -2px;
   bottom: -2px;
   background: #fff;
-  z-index: -1;
+  z-index: 0;
 }
 
 .respn-box:after {
@@ -72,25 +72,28 @@
   right: -2px;
   bottom: -2px;
   background: #fff;
-  z-index: -2;
+  z-index: -1;
   filter: blur(40px);
 }
 
 .respn-box:before,
 .respn-box:after {
   background: linear-gradient(235deg, #2196f3, #010615, #F00000);
+  opacity: 0.35;
 }
 
 .respn-box:nth-child(2):before,
 .respn-box:nth-child(2):after {
   /* not supported 😣 */
   background: linear-gradient(235deg, #2196f3, #010615, #F00000);
+  opacity: 0.35;
 }
 
 .respn-box:nth-child(3):before,
 .respn-box:nth-child(3):after {
   /* not supported 😣 */
   background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+  opacity: 0.35;
 }
 
 .respn-box .respn-content {

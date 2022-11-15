@@ -8,6 +8,25 @@ body {
   background: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+[data-type="iceland"] .content__left {
+  background-image: url("../images/main_building.jpeg");
+}
+.spinner--right [data-type="iceland"] .content__left {
+  background-image: none;
+}
+[data-type="china"] .content__left {
+  background-image: url("../images/mip_images/ml-3.jpeg");
+}
+.spinner--right [data-type="china"] .content__left {
+  background-image: none;
+}
+[data-type="usa"] .content__left {
+  background-image: url("../images/ml-gate.png");
+  opacity: 0.5;
+}
+.spinner--right [data-type="usa"] .content__left {
+  background-image: none;
+}
 .js-transitions-disabled * {
   transition: none !important;
 }
@@ -151,6 +170,7 @@ body {
 .content__left {
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
 }
 .content__left:after {
   position: absolute;
@@ -214,27 +234,15 @@ body {
   font-family: oswald;
   color: #fff;
 }
-[data-type="iceland"] .content__left {
-  background-image: url("../images/main_building.jpeg");
-}
-.spinner--right [data-type="iceland"] .content__left {
-  background-image: none;
-}
-[data-type="china"] .content__left {
-  background-image: url("../images/mip_images/ml-3.jpeg");
-}
-.spinner--right [data-type="china"] .content__left {
-  background-image: none;
-}
-[data-type="usa"] .content__left {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/usa.jpg");
-}
-.spinner--right [data-type="usa"] .content__left {
-  background-image: none;
-}
-[data-type="peru"] .content__left {
+
+
+/* [data-type="usa"].content__left .img{
+  opacity: 0.5;
+} */
+
+/* [data-type="peru"] .content__left {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg");
 }
 .spinner--right [data-type="peru"] .content__left {
   background-image: none;
-}
+} */

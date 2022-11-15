@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megalith 2023</title>
+    
     <link rel="stylesheet" href="coming_soon.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -20,6 +22,9 @@
 
 
     <link rel="stylesheet" type="text/css" href="header_footer.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="contactus.css">
+    <link rel="stylesheet" type="text/css" href="buttons.css">
 
 </head>
 <body>
@@ -29,19 +34,21 @@
 <!-- end about -->
 
     <header class="mip-header">
+      <div class="left">
     <div class="left-header">
-      <a href="coming_soon.html" class="ml-logo"><img src="megalogotheme.png">
+      <a href="http://localhost:3000/coomingsoon" class="logo"><img src="megalogotheme.png">
       Megalith<span>'23</span></a>
     </div>
     <nav class="navbar">
-      <a href="http://141.136.35.50:3000/">home</a>
+      <a href="http://localhost:3000/">home</a>
       <a href="#brochure_btn">Internship Brochure</a>
-      <a href="coming_soon.html">Go to Megalith 2023</a>
+      <a href="https://2022.megalith.co.in/">Go to Megalith 2022</a>
     </nav>
+      </div>
 
     <div class="icons">
       <div id="menu-btn" class="fas fa-bars"></div>
-      <a href="http://141.136.35.50:3000/login"><div id="login-btn" class="fas fa-user"></div></a>
+      <a href="http://localhost:3000/login"><div id="login-btn" class="fas fa-user"></div></a>
     </div>
   </header>
 
@@ -78,16 +85,17 @@
                     </div>
                 </div>
 
-                <p class="p404" data-depth="0.50">Megalith 2023</p>
-                <p class="p404" data-depth="0.10">Megalith 2023</p>
+                <p class="p404" data-depth="0.50">Coming Soon</p>
+                <p class="p404" data-depth="0.10">Coming Soon</p>
 
             </div>
 
             <div class="text">
-                <article>
-                    <p>Coming Soon </p>
-                    
-                </article>
+              
+               <article>
+                    <p>Megalith 2023 </p>
+                  </article> 
+               
             </div>
 
         </div>
@@ -96,31 +104,68 @@
 
 
     <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>Megalith 2023</h4>
-          <img src="megalogotheme.png">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#brochure_btn">Internship Brochure</a></li>
-            <li><a href="http://141.136.35.50:3000/commingsoon">Megalith 2023</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/megalithkgp"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/megalithkgp"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/iitkgp.megalith/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/megalith-iit-kharagpur/mycompany/"><i class="fab fa-linkedin-in"></i></a>
-
+      <div class="footer-container">
+        <div class="footer-row">
+  
+          <div class="contactus-wrapper">
+            <div class="contactus-container">
+              <form class="contactus" action="/contactus" method="POST">
+                <h1>Let Us know, What's in your Head.</h1>
+                <div class="item name_email">
+                  <input type="text" name="sendername" placeholder="Your name">
+                  <input type="email" name="senderemail" placeholder="Email">
+                </div>
+                <div class="item">
+                  <input type="text" name="sendersubject" placeholder="Subject">
+                </div>
+                <div class="item">
+                  <textarea name="sendermessage" placeholder="Message"></textarea>
+                </div>
+                <div class="contactusbtn"><button class="regbtn regbtn__new" type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>  
+  
+          <div class="footer-div">
+            <div class="footer-div-1">
+          <div class="footer-col">
+            <h4>Megalith 2023</h4>
+            <img src="megalogotheme.png">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#brochure_btn">Internship Brochure</a></li>
+              <li><a href="coming_soon.html">Megalith 2023</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/megalithkgp"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/megalithkgp"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/iitkgp.megalith/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/megalith-iit-kharagpur/mycompany/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="contact-number">
+              <ul>
+                <li><a href="">Rounak Das +919330341418</a></li>
+                <li><a href="">Aditya Pandey +916394433068</a></li>
+                <li><a href="">Abhijeet Niggam +918901675870</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        
+      
+              
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  
     <script src="coming_soon.js"></script>
     <script type="script.js"></script>
 </body>

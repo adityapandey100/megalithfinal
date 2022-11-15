@@ -320,7 +320,216 @@ nav.navbar{
     display: none;
   }
 }
+.home .slide {
+  width: 50rem;
+  position: relative;
+  /* /added just now/ */
+  z-index: -1;
+}
+.content {
+  width: 50rem;
+  position: relative;
+  /* /added just now/ */
+  z-index: 0;
+}
 
+.home .slide .content h3 {
+  font-size: 6rem;
+  color: var(--black);
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.home .slide .content h4 {
+  font-size: 2rem;
+  line-height: 2;
+  color: var(--black);
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.home .slide .content p {
+  font-size: 1.9rem;
+  /* /font-weight: bold;/ */
+  color: var(--black);
+  line-height: 2;
+  padding-top: 35px;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  left: initial;
+  right: 0;
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  background: var(--white);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+  background: darkred;
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.home .swiper-button-prev {
+  right: 7rem;
+}
+
+@media (max-width: 800px) {
+  .pc_carousel {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .mob_carousel {
+    display: none;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Cairo");
+.essence {
+  color: #122;
+  font-size: large;
+}
+.bg {
+  opacity: 0.95;
+  /* z-index: -1; */
+  position: absolute;
+  background: no-repeat;
+  width: 100%;
+}
+.title-megalith {
+  /* font-family: "Cairo"; */
+  /* 	font-family: "Lobster"; */
+  font-family: "Lobster", cursive;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3%;
+  /* height: 100vh; */
+  letter-spacing: 5px;
+  line-height: 2;
+}
+
+.megalith-h1 {
+  background-image: url(https://media.giphy.com/media/10TZs8ho7qJeVy/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 100px;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #fff;
+  transition: 0.35s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  /* font-family: "Montserrat"; */
+  font-family: "Lobster", cursive;
+}
+
+.white-mode:hover {
+  background-color: #fff;
+  color: #122;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
+.reveal-center {
+  display: grid;
+  margin: auto 10%;
+}
+.reveal {
+  height: auto;
+  background-image: url(images/home-slide-2.jpeg);
+  margin: 0 30% 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal {
+  position: relative;
+  display: flex;
+  color: rgb(84, 65, 2);
+  font-size: 80px;
+  font-family: "Lobster", cursive;
+  /* font-family: "Cairo"; */
+  margin: 0 30% 0 30%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: pre;
+}
+.reveal span {
+  opacity: 0;
+  transform: scale(0);
+  animation: fade-in 2.4s forwards;
+  font-family: "Lobster", cursive;
+}
+.reveal::before,
+.reveal::after {
+  position: absolute;
+
+  top: 0;
+  height: 100%;
+  width: 50%;
+
+  opacity: 0;
+  transform: scale(0);
+  font-family: "Lobster", cursive;
+}
+.reveal::before {
+  left: 50%;
+  font-family: "Lobster", cursive;
+  animation: slide-left 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards infinite;
+}
+.reveal::after {
+  right: 50%;
+  animation: slide-right 1 0.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards
+    infinite;
+  font-family: "Lobster", cursive;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slide-left {
+  to {
+    left: -6%;
+    opacity: 1;
+    transform: scale(0.9);
+  }
+}
+@keyframes slide-right {
+  to {
+    right: -6%;
+    opacity: 1;
+    transform: scale(0.9);
+  }
+}
 .about{
   /*background: #000;*/
   padding-bottom: 0px;
