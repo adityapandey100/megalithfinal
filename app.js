@@ -378,7 +378,7 @@ app.post('/contactus', function (req, res) {
                 // send mail with defined transport object
     let mailinfo ={
         from: '" Megalith " <adityapandeyiitkgp2125@gmail.com>', // sender address
-        to: 'adityapandeygkp90@gmail.com', // list of receivers
+        to: 'adityapandeygkp90@gmail.com , utkarshgupta6203@gmail.com ,', // list of receivers
         subject: "Query details", // Subject line
         // text: "Hello world?", // plain text body
         text: "Hey here is new quert for you..",

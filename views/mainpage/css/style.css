@@ -398,7 +398,15 @@ nav.navbar{
 @import url("https://fonts.googleapis.com/css?family=Cairo");
 .essence {
   color: #122;
-  font-size: large;
+  font-size: 2vw;
+  font-weight: 500;
+}
+@media(max-width : 450px) {
+  .essence{
+    font-size: 5vw;
+    font-weight: 600;
+  }
+  
 }
 .bg {
   opacity: 0.95;
@@ -424,8 +432,9 @@ nav.navbar{
 }
 
 .megalith-h1 {
-  background-image: url(https://media.giphy.com/media/10TZs8ho7qJeVy/giphy.gif);
-  background-size: cover;
+  /* background-image: url(images/headerbg.gif); */
+  /* background-size: cover; */
+  /* background-size: 435px 250px;  */
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;

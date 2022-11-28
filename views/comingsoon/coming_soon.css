@@ -22,7 +22,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   color: inherit;
- 
+  height: 100%;
 }
 h1:focus,
 h2:focus,
@@ -59,8 +59,7 @@ body {
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 88vh;
 }
 .wrapper .container {
   margin: 0 auto;
@@ -202,7 +201,7 @@ body {
   margin-bottom: 80px;
   
  /* text-shadow: 6px 6px 10px #32243E;*/
- text-shadow:6px 6px 10px darkred;
+ text-shadow:8px 7px 6px rgb(0, 0, 0);
   font-weight: 700;
 }
 @media screen and (max-width: 799px) {
@@ -430,4 +429,9 @@ margin-bottom: 120px;
   animation-name: pieceLeft;
   animation-delay: 4.5s;
 }
-
+@media(max-width : 450px){
+  .wrapper{
+    margin-left: -9%;
+    margin-top: 39%;
+  }
+}

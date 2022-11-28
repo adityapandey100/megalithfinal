@@ -53,7 +53,9 @@ html::-webkit-scrollbar-thumb {
 section {
   padding: 5rem 10%;
 }
-
+h1{
+  text-shadow: 6px 6px 6px black;
+}
 .main h1{
   color: var(--light-color);
   font-size: 40px;
@@ -365,7 +367,7 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: #f72359;
+  background: #bf2c69;
   padding: 0.5vw 3vw;
   border: none;
   color: white;
@@ -388,7 +390,7 @@ button::before {
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  background: radial-gradient(circle closest-side, #ff0040, transparent);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   transition: width .2s ease, height .2s ease;
