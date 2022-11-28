@@ -127,9 +127,9 @@ app.get("/", function (req, res) {
 
 //Showing comming soon page
 
-app.use('/coomingsoon', express.static(path.join(__dirname, '/views/coomingsoon')));
-app.get("/coomingsoon", function (req, res) {
-    res.render("commingsoon");
+app.use('/comingsoon', express.static(path.join(__dirname, '/views/comingsoon')));
+app.get("/comingsoon", function (req, res) {
+    res.render("comingsoon");
 });
 
 
