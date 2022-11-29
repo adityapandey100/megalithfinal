@@ -254,17 +254,34 @@ app.post('/forgot-password', (req, res, next) => {
                   port: 587,
                   secure: false, // true for 465, false for other ports
                   auth: {
-                    user: 'adityapandeyiitkgp2125@gmail.com', // generated ethereal user
-                    pass: 'rqzevkgnkvschtsl', // generated ethereal password
+                    user: 'megalith2019.iitkgp@gmail.com', // generated ethereal user
+                    pass: 'keaophrrnoessady', // generated ethereal password
                   },
                 });
                 // send mail with defined transport object
                 let mailinfo ={
-                          from: '" Megalith " <adityapandeyiitkgp2125@gmail.com>', // sender address
+                          from: '" Megalith " <megalith2019.iitkgp@gmail.com>', // sender address
                           to: databaseEmail, // list of receivers
                           subject: "Reset password link", // Subject line
                           // text: "Hello world?", // plain text body
-                          text: link
+                          html : `<h2">Hello !</h2>
+                          <p>You are receiving this email because we received a password reset request for your account.</p>
+                          <a href="${link}">
+                 <button style  = "background-color: blue;
+                 border: none;
+                 color: white;
+                 padding: 10px 24px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: flex;
+                 align-items: center;
+                 justify-content:center;
+                 font-size: 12px;
+                 border-radius: 25px;
+                 cursor: pointer;" >Reset Password</button>
+               </a>
+                <h3>Regards,</h3>
+                <h3>Megalith 2023</h3>`
                       };
                       transporter.sendMail(mailinfo, function(error, info){
                         if (error) {
@@ -272,7 +289,7 @@ app.post('/forgot-password', (req, res, next) => {
                           res.send("Not Found!!")
                         } else {
                           console.log('Email sent: ' + info.response);
-                          res.send("Password reset Link has been sent to your email...")
+                          res.redirect("/");
                         }
                       });
         }
