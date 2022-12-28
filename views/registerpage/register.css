@@ -279,8 +279,8 @@ h1 {
     margin-top: -25vw;
 } */
 #signupbutton{
-    margin-top: 4vw;
-    margin-bottom: 3vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 p {
     font-size: 2vw;
@@ -292,8 +292,9 @@ p {
 }
 
 span {
-    font-size: 1.2vw;
+    font-size: 1.8rem;
     color: beige;
+    margin-top: 30px;
 }
 
 a {
@@ -309,11 +310,11 @@ a {
     overflow: scroll;
     width: 60%;
     max-width: 100%;
-    min-height: 33vw;
+    min-height: 474px;
     opacity: 0.8;
     -ms-overflow-style: none;
     scrollbar-width: none;
-	  margin-top: 62vw;
+	  margin-top: 118px
 
 }
 .container::-webkit-scrollbar{
@@ -325,13 +326,13 @@ a {
     display: flex;
     flex-direction: column;
     padding: 0 5vw;
-    min-height: 35vw;
+    min-height: 100%;
+    margin: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 .signinform{
-    margin-top: -2vw;
     font-size: 1.6vw;
 }
 .sign-up-container{
@@ -371,7 +372,7 @@ button {
   padding: 0.5vw 3vw;
   border: none;
   color: white;
-  font-size: 1vw;
+  font-size: 1.5rem;
   cursor: pointer;
   outline: none;
   overflow: hidden;
@@ -414,6 +415,9 @@ button:hover::before {
     cursor: pointer;
 } */
 
+.signinform button{
+  margin-top: 30px;
+}
 input[type=text] {
     width: 22vw;
     text-align: center;
@@ -576,15 +580,22 @@ button.ghost {
     transform: translateX(20%);
     display: none;
 }
+.forgotpassword{
+  margin-top: 2vw;
+  text-decoration: underline;
+}
+@media (max-width : 1008px){
+  .container{
+    width: 86%;
+  }
+}
+
 @media (max-width: 450px){
     .container{
-        min-height: 62vh;
-        margin-top: 122vh;
+        min-height: 720px;
         width: 76%;
         overflow: hidden;
-    }
-    .sign-in-container{
-      height: 60vh;
+        margin-top: 200px;
     }
     /* .sign-up-container{
 
@@ -599,12 +610,15 @@ button.ghost {
     .form-container{
         transform: translate(0%,40%);
         width: 100%;
-        top: 5vh;
+        top: 50px;
+    }
+    .form-container form{
+      min-height: 85.1%;
     }
     .overlay-container{
         width: 100%;
         transform: translate(-50%,0%);
-        height: 44%;
+        height: 37.5%;
     }
     .overlay-panel p{
       font-size: 4vw;
@@ -612,15 +626,15 @@ button.ghost {
     }
     .overlay{
         width: 100%;
-        transform: translate(100%,0%);
+        transform: translatex(100%);
     }
-    .signupform{
-      height: 81vh;
-      margin-top: 2vh;
+    .container.right-panel-active .overlay{
+      transform: translateX(100%);
     }
     .overlay-left{
         width: 100%;
-        margin-top: 16vh;
+        margin-top: 190px;
+        height: 60.5%;
         transform: translate(-13%,0%);
         visibility: hidden;
     }
@@ -646,6 +660,9 @@ button.ghost {
       padding: 0.75vw 0vw;
       width: 45vw;
     }
+    .right-panel-active .sign-up-container form{
+      min-height: 55%;
+    }
     button{
       width: 18vw;
       font-size: 3vw;
@@ -659,7 +676,8 @@ button.ghost {
       margin-bottom: 1vh;
     } */
     .sign-in-container{
-      margin-top: 1vh;
+      margin-top: 9px;
+      height: 542px;
     }
     .signinoption{
       margin-top: 4vh;
@@ -671,62 +689,35 @@ button.ghost {
         display: none;
     }
     .container.right-panel-active .overlay-left{
-        transform: translate(50%,0%);
         visibility: visible;
     }
     .container.right-panel-active.sign-in-container{
         display: none;
     }
     .container.right-panel-active .overlay-container{
-        transform: translateX(-50%);
+        transform: translate(-50%,17.5%);
     }
     .container.right-panel-active .sign-up-container{
         transform: translate(0%,40%);
     }
     .right-panel-active{
-       min-height: 145vh;
-       margin-top: 135vh;
+       min-height: 1315px;
+    }
+    .forgotpassword{
+      margin-top: -35px;
     }
 }
-@media(min-width:900px){
+@media(min-width:1008px){
     h1{
-      font-size: 3vw;
+      font-size: 5rem;
     }
     p{
-      font-size: 1.7vw;
+      font-size: 2.4rem;
     }
 }
-@media(max-width: 376px){
-    .container{
-      margin-top: 171vh;
-    }
-    .signupform{
-      height: 97vh;
-    }
-    .right-panel-active{
-      min-height: 170vh;
-      margin-top: 199vh;
-    }
+#signupbutton{
+  display: none;
 }
-.forgotpassword{
-  margin-top: 2vw;
-  text-decoration: underline;
+#enterotp{
+  display: none;
 }
-/* ======================================================================= */
-
-/* footer code  */
-/*.header{
-
-*{
-	margin: 0;
-	padding: 0;
-}
-
-/*.header{
-	min-height: 100vh;
-	width: 100%;
-	background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(./images/background.jpg);
-	background-position: center;
-	background-size: cover;
-	position: relative;
-}*/

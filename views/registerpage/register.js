@@ -122,4 +122,3 @@ window.onscroll = () =>{
    // loginForm.classList.remove('active');
    // contactInfo.classList.remove('active');
 }
-
