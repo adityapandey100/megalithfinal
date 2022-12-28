@@ -13,6 +13,7 @@ const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const app = express();
 const path = require('path');
+const newOTP = require('otp-generators');
 var flash = require('connect-flash');
 const { request } = require('http');
 const { response } = require('express');
@@ -104,6 +105,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+    otpentered : {
+        type : String,
+        required : true ,
+        trim : true
     }
 });
 
@@ -132,7 +138,7 @@ app.get("/comingsoon", function (req, res) {
     res.render("comingsoon");
 });
 
-
+ 
 // Showing secret page
 app.use('/secret/:id', express.static(path.join(__dirname, '/views/dashboard')));
 app.get("/secret/:id", isLoggedIn, function (req, res) {
@@ -164,30 +170,35 @@ app.get("/signup", function (req, res) {
 
 // Handling user signup
 app.post("/signup", function (req, res) {
-
+    let username = req.body.username;
+    let databaseEmail = req.body.email;
+    let mobileNumber = req.body.mobileNumber;
+    let college = req.body.college;
+    let country = req.body.country;
+    let state = req.body.state;
+    let city = req.body.city;
+    let gender = req.body.gender;
+    let yearsOfStudy = req.body.yearsOfStudy;
+    let partOrNot = req.body.partOrNot;
     User.register({
-        username: req.body.username,
-        databaseEmail: req.body.email,
-        mobileNumber: req.body.mobileNumber,
-        college: req.body.college,
-        country: req.body.country,
-        state: req.body.state,
-        city: req.body.city,
-        gender: req.body.gender,
-        yearsOfStudy: req.body.yearsOfStudy,
-        partOrNot: req.body.partOrNot
+        username,
+        databaseEmail,
+        mobileNumber,
+        college,
+        country,
+        state,
+        city,
+        gender,
+        yearsOfStudy,
+        partOrNot
     },
-        req.body.password,
+    req.body.password,
         function (err, user) {
             if (err) {
                 console.log(err);
                 res.send(err);
                 return res.render("login");
             }
-            // passport.authenticate("local")(
-            //     req, res, function () {
-            //         res.render("secret");
-            //     });
             passport.authenticate("local")(
             req, res, function () {
                 if(req.isAuthenticated(req, res)) {
